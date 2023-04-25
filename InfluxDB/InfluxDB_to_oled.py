@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-Reads database AQI under dev and puts all info to be displayed. Added ads1x15 support
+# Reads database AQI under dev and puts all info to be displayed. Added ads1x15 support
 
 
 import time
