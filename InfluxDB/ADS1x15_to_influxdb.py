@@ -20,7 +20,7 @@ parser.add_argument('--channel', '-c', type=int, help='The channel to read from 
 args = parser.parse_args()
 
 # Set up InfluxDB connection
-client = InfluxDBClient('localhost', 8086, 'user', 'yourpass', 'AQI')
+client = InfluxDBClient('localhost', 8086, '#Your_username', '#Your_pass', '#Your_Database')
 
 # Set up ADS1x15 sensor
 i2c = board.I2C()
