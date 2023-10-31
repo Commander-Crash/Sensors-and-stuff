@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from datetime import datetime
 from influxdb import InfluxDBClient
 import Adafruit_SSD1306
