@@ -1,0 +1,31 @@
+These two Python scripts, sender.py and receiver.py, are used to send and receive messages over a network using TCP/IP sockets. The scripts utilize the socket module to establish a connection between two devices. Additionally, Receiver.py uses the sense_hat module to display received messages on a Sense HAT, which is a hardware add-on for the Raspberry Pi that includes an LED matrix.
+
+Here's how you can use these scripts in the terminal:
+
+    Sender.py:
+
+    This script sends a message to a specified IP address and port.
+
+    Usage:
+
+    bash
+
+python Sender.py
+
+By default, it sends the message "5GHZ COX DETECTED" to the IP address 192.168.3.100 on port 2233. If you want to send a different message or send it to a different IP and port, you can modify the message, target_ip, and target_port variables within the script.
+
+Receiver.py:
+
+This script listens for incoming connections on a specified IP address and port. When a connection is established, it receives a message and displays it on the Sense HAT.
+
+Usage:
+
+bash
+
+    python Receiver.py
+
+    By default, it listens on all available interfaces (0.0.0.0) on port 2233. If you want to listen on a specific interface or port, you can modify the target_ip and target_port variables within the script.
+
+    To stop the script, you can press Ctrl+C in the terminal.
+
+Keep in mind that you'll need Python installed on your system to run these scripts, and the sense_hat module for the Receiver.py script. Additionally, make sure that the IP addresses and ports used in these scripts are appropriate for your network configuration.
