@@ -1,0 +1,59 @@
+Overview:
+
+This Python script, influx_bme680_to_oled.py, is designed to display data from an InfluxDB database on an OLED display connected to a Raspberry Pi. It retrieves the latest data from a specified InfluxDB instance and displays it in a formatted manner on the OLED screen.
+Prerequisites
+
+Before running the script, ensure you have the following:
+
+    Python Libraries:
+        datetime
+        influxdb
+        Adafruit_SSD1306
+        board
+        PIL
+        subprocess
+        time
+        RPi.GPIO
+
+    You can install these libraries using the Python package manager, pip.
+
+    Hardware Setup:
+        Connect an SSD1306 OLED display to your Raspberry Pi.
+
+    InfluxDB:
+        Have InfluxDB installed and running on your local machine or specify the correct host and port for a remote instance.
+
+Usage
+
+    Configuring InfluxDB:
+        Ensure you have a functional InfluxDB instance with a database and a measurement containing relevant data (e.g., temperature, humidity, air pressure). Adjust the HOST, PORT, USERNAME, PASSWORD, DATABASE, and MEASUREMENT variables in the script to match your InfluxDB configuration.
+
+    Running the Script:
+        Open a terminal and navigate to the directory containing influx_bme680_to_oled.py.
+        Run the script with the following command:
+
+        bash
+
+        python influx_bme680_to_oled.py
+
+    Operation:
+        The script will continuously query the InfluxDB for the latest data and display it on the OLED screen.
+        It will also display the name of the script for a brief period when started.
+
+    Exiting:
+        To stop the script, you can use Ctrl+C in the terminal. The OLED display will clear, and the script will exit.
+
+Notes
+
+    If the data format in your InfluxDB differs from the assumed format in the script (temperature, humidity, air pressure), you may need to modify the script to match your specific use case.
+
+    Ensure that the OLED display is properly connected to your Raspberry Pi for the script to function correctly.
+
+    Make sure you have the required Python libraries installed before running the script.
+
+Disclaimer
+
+This script is provided as-is and may require adjustments based on specific hardware configurations and InfluxDB setups. It is recommended to have a basic understanding of Python and InfluxDB to make necessary modifications.
+License
+
+This script is provided under the MIT License. See the license file for more details.
