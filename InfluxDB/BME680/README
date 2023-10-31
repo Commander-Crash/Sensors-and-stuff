@@ -24,6 +24,16 @@ Before running the script, ensure you have the following:
         Have InfluxDB installed and running on your local machine or specify the correct host and port for a remote instance.
 
 Usage
+Before running please open script and look for line:
+# Set up InfluxDB client
+HOST = 'localhost'
+PORT = 8086
+USERNAME = 'Your_UserName'
+PASSWORD = 'Your_password'
+DATABASE = 'Your_DB'
+MEASUREMENT = 'Your_measurment'
+
+And Input the your currect vaules.
 
     Configuring InfluxDB:
         Ensure you have a functional InfluxDB instance with a database and a measurement containing relevant data (e.g., temperature, humidity, air pressure). Adjust the HOST, PORT, USERNAME, PASSWORD, DATABASE, and MEASUREMENT variables in the script to match your InfluxDB configuration.
