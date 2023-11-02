@@ -1,0 +1,56 @@
+BME To InfluxDB
+
+This Python script is designed to collect gas resistance and environmental data from a BME680 sensor on a Raspberry Pi. The script stores the collected data in an InfluxDB database, allowing for easy retrieval and analysis.
+Prerequisites
+
+Before running the script, ensure you have the following:
+
+    Hardware:
+        Raspberry Pi with a BME680 sensor and Sense HAT (optional, for display functionality).
+
+    Software:
+        Python 3.x installed on your Raspberry Pi.
+        Required Python libraries (influxdb, socket, bme680, configparser, datetime, time, and sys). You can install them using pip:
+
+        pip install influxdb
+        pip install bme680
+
+    InfluxDB Server:
+        An InfluxDB server with a configured database for data storage.
+
+
+Configuration:
+
+    Edit BME680_config.ini Fill in the necessary information such as InfluxDB server details, sensor settings, and file paths.
+
+Run the Script:
+
+Run the script with the path to your BME680_config.ini file as a parameter:
+
+lua
+
+    python senddata_BME_to_influxdb.py /path/to/BME680_config.ini
+
+    The script will start collecting data and storing it in the specified InfluxDB database.
+
+Display Functionality (Optional)
+
+If you have a Sense HAT connected, the script will also display status messages on the Sense HAT LED display:
+
+    When the script starts, it will display "INITIALIZING BME"
+    When the gas resistance burn-in data collection is complete and the main script begins, it will display "BME READY" in white with a scroll speed of 0.5.
+    In case of a RuntimeError related to the BME680 sensor, it will display "BME ERROR" in red.
+
+Troubleshooting
+
+    If you encounter any errors, please double-check the connections of your BME680 sensor and ensure it is properly connected to your Raspberry Pi.
+
+    If you receive the warning message Failed to initialise TCS34725 colour sensor. (sensor not present), it indicates that the script is attempting to initialize a color sensor that is not present on your Sense HAT. You can safely ignore this warning.
+
+License
+
+This project is licensed under the MIT License.
+Author
+
+Commander Crash
+
